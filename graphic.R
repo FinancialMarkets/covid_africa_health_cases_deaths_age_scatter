@@ -7,11 +7,11 @@ options(browser = "/usr/bin/firefox")
 
 data <- read_csv("../african_latest_data.csv")
 data$dateRep <- as.Date(data$dateRep, format="%d/%m/%Y")
-data$popData2018 <- data$popData2018 / 1000000
-data$cases_per_million <- data$cumulative_cases / data$popData2018
-data$deaths_per_million <- data$cumulative_deaths / data$popData2018
+data$popData2019 <- data$popData2019 / 1000000
+data$cases_per_million <- data$cumulative_cases / data$popData2019
+data$deaths_per_million <- data$cumulative_deaths / data$popData2019
 
-data_graphic <- data[, c("countryterritoryCode", "geoId", "dateRep", "countriesAndTerritories", "cases_per_million", "cumulative_cases", "cases", "deaths", "cumulative_deaths", "deaths_per_million")]
+data_graphic <- data[, c("countryterritoryCode", "geoId", "dateRep", "countriesAndTerritories", "cases_per_million", "cumulative_cases", "cases_weekly", "deaths_weekly", "cumulative_deaths", "deaths_per_million")]
 
 ## remove france
 
